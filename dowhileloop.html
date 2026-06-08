@@ -1,3 +1,5 @@
+
+#output is 15\when we change the values from x=5 and while(x < 10 ) then we get the output from 5 6 7 8 9 git
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,15 +8,14 @@
     <title>Document</title>
 </head>
 <body>
+    <p>breaking loop</p>
     <script>
-    let x=5;
-    do{
-        console.log(x)
-x++
-    }
-
-    while(x<10)
+        let x;
+        for(x=1; x<=10; x++){
+            console.log(x)
+            if(x==5)
+            break
+        }
     </script>
 </body>
 </html>
-#output is 15\when we change the values from x=5 and while(x < 10 ) then we get the output from 5 6 7 8 9 
