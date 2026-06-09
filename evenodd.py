@@ -1,4 +1,4 @@
-# Program to check if a number is Even or Odd
+"""# Program to check if a number is Even or Odd
 
 def check_even_odd(num):
     """Return 'Even' if num is even, otherwise 'Odd'."""
@@ -21,4 +21,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+"""
 
