@@ -1,0 +1,28 @@
+//a js object is basically a collection of unordered propertirs
+//values associated with a js obj are called its properties
+
+//properties can usually be added updated and deleted excluding read only properties
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Creating Javascript objects</h1>
+    <p id ="demo"></p>
+    <script>
+        
+        var student ={
+            name: "chris",
+            age: 21,
+            studies: "computer Science",
+        };
+        student.age=24
+        document.getElementById("demo").innerHTML = student.name + "of the age" + student.age + "studies" +  student.studies;
+    </script>
+</body>
+</html>
