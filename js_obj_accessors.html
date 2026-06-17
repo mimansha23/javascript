@@ -1,0 +1,26 @@
+//getters and setters allow defining of obj accessors
+//grester is used to get the value of the properties of an object
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>creating js obj</h1>
+    <p id ="demo"></p>
+<script>
+    var car = {
+        model: "BMW 320d",
+        color: "Navy Blue",
+        fuel_type: "diesel",
+        get fuel(){
+            return this.fuel_type
+        },
+
+    };
+     document.getElementById("demo").innerHTML = car.fuel
+</script>
+</body>
+</html>
