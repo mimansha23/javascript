@@ -39,3 +39,97 @@
 </script>
 </body>
 </html>
+<!-- //Here is a clear and complete explanation of JavaScript Object Accessors with runnable examples, robust error handling, and best practices.
+
+JavaScript Object Accessors (getters and setters)
+JavaScript provides two special methods inside objects:
+
+Getter (get): Automatically runs when you access a property.
+Setter (set): Automatically runs when you assign a value to a property.
+These are useful for:
+
+Validating data before setting it.
+Creating computed properties.
+Hiding internal implementation details.
+Complete Runnable Example (with validation)
+Javascript
+
+Copy code
+// Object with accessors (getters and setters)
+const person = {
+    firstName: "John",
+    lastName: "Doe",
+
+    // Getter for fullName (computed property)
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    },
+
+    // Setter with validation
+    set fullName(value) {
+        try {
+            if (typeof value !== "string") {
+                throw new Error("Full name must be a string.");
+            }
+
+            const parts = value.trim().split(" ");
+            if (parts.length < 2) {
+                throw new Error("Please enter at least two words for the full name.");
+            }
+
+            this.firstName = parts[0];
+            this.lastName = parts.slice(1).join(" ");
+        } catch (err) {
+            console.error("Error:", err.message);
+        }
+    }
+};
+
+// Demo usage
+console.log(person.fullName); // Getter is called → "John Doe"
+
+person.fullName = "Alice Johnson"; // Setter runs and updates names
+console.log(person.fullName); // "Alice Johnson"
+
+person.fullName = 123; // Invalid → error handled safely
+What This Example Shows
+Access person.fullName → JavaScript automatically calls the getter.
+Assign person.fullName = "Alice Johnson" → JavaScript calls the setter.
+Setter validates:
+Value must be a string.
+Must have at least two words.
+Errors are caught safely.
+Another Simple Example
+Javascript
+
+Copy code
+const obj = {
+    _count: 0,
+
+    get count() {
+        return this._count;
+    },
+
+    set count(value) {
+        if (typeof value === "number" && value >= 0) {
+            this._count = value;
+        } else {
+            console.error("Count must be a non-negative number.");
+        }
+    }
+};
+
+obj.count = 10;
+console.log(obj.count); // 10
+
+obj.count = -5; // Error
+When to Use Accessors
+To validate data before setting it.
+To compute values dynamically.
+To protect internal fields (like _count).
+To create derived properties (like fullName).
+If you want, I can also provide:
+
+Accessors inside ES6 classes
+Accessors with private fields
+Real‑world examples (forms, APIs, etc.) -->
