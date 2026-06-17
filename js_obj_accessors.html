@@ -22,5 +22,20 @@
     };
      document.getElementById("demo").innerHTML = car.fuel
 </script>
+<script>
+    var car ={
+        model: "audi ad",
+        color: "Bright Red",
+        fuel_type: "",
+        set fuel(fuel){
+            this.fuel_type =fuel;
+
+        }
+
+    }
+    car.fuel = "petrol";
+ document.getElementById("demo").innerHTML = car.fuel_type;
+ 
+</script>
 </body>
 </html>
