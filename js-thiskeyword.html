@@ -1,0 +1,27 @@
+#this keyword refers to an object which is excuating the current piece of code 
+# in simple terms this keyword references the object that is executing the current function 
+# if the function being referenced is a regural function this references the global .
+#if the function that is being referenced is a method in an object this references the object itself
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>javascript async /await</h1>
+
+</head>
+<body>
+<script>
+var value = 50
+
+function My_function(){
+var value =100
+alert("value: "+ value)
+alert("This value: "+this.value)
+
+}
+My_function()
+</script>
+</body>
+</html>
