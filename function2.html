@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,4 +22,30 @@
         document.getElementById("demo").innerHTML =y()
     </script>
 </body>
+</html> -->
+#the function constructor
+#self invoking function
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Create a function that takes two arguments and returns their sum
+const adder = new Function("a", "b", "return a + b");
+// Call the function
+console.log(adder(2, 6)); // Output: 8
+    </script>
+</body>
 </html>
+// Create a function that finds the largest number in an array
+const findLargestNumber = new Function(
+ "function findLargestNumber(arr) { return Math.max(...arr); }; return findLargestNumber"
+);
+// Call the function
+console.log(findLargestNumber.call({}).call({}, [2, 4, 1, 8, 5])); // Output: 8
