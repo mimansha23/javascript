@@ -149,8 +149,15 @@ function* generateFunc(){
 }
 let generator = generateFunc();
 let one = generator.next();
-alert(JSON.stringify(one));
+let two = generator.next();
+let three = generator.next();
 
+
+alert(JSON.stringify(one));
+alert(JSON.stringify(two));
+alert(JSON.stringify(three));
+//{value":1,"done":false}
+//
 
   </script>
 </body>
