@@ -40,37 +40,8 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        
-        function add(a, b) {
-  return a + b;
-}
 
-let sum1 = add(5, 5);
-let sum2 = add(50, 50);
-
-    </script>
-    <!-- <script>
-         var body ="return Math.PI *rad *rad"
-        var circle = new Function("rad",body);
-        alert(circle(5))//output is 78.53981633974483
-
-</script> -->
-
- <script>
-    //functions can be written more compactly with the help of arrow functions
-    //arrow function expression are ill suited as methods and they cannot be used as constructors
-    //syntax let func =(arg1 ,arg 2 , ...argN) => expression 
-  const Myfunc = (a,b , c )=> {return a*b*c}
-  let product = Myfunc(2,3,4)
-  document.getElementById("demo").innerHTML = "the product of the three digit is " + product
-  
-  //output//the product of the three digit is 24
-
-  </script> 
-</body>
-</html>
-
+    <!-- 
 function add(a, b) {
     // Validate that both inputs are numbers
     if (typeof a !== "number" || typeof b !== "number") {
@@ -114,4 +85,74 @@ Redo
 Copy
 
 Export
+ -->
+    <script>
+        
+        function add(a, b) {
+  return a + b;
+}
+
+let sum1 = add(5, 5);
+let sum2 = add(50, 50);
+
+    </script>
+    <!-- <script>
+         var body ="return Math.PI *rad *rad"
+        var circle = new Function("rad",body);
+        alert(circle(5))//output is 78.53981633974483
+
+</script> -->
+
+ <script>
+    //functions can be written more compactly with the help of arrow functions
+    //arrow function expression are ill suited as methods and they cannot be used as constructors
+    //syntax let func =(arg1 ,arg 2 , ...argN) => expression 
+  const Myfunc = (a,b , c )=> {return a*b*c}
+  let product = Myfunc(2,3,4)
+  document.getElementById("demo").innerHTML = "the product of the three digit is " + product
+  
+  //output//the product of the three digit is 24
+
+  </script> 
+
+  <script>
+//Generator Function in JavaScript (Short Definition)
+
+// A generator function is a special function that can pause and resume execution using the yield keyword. It is declared with function*.
+
+// function* numbers() {
+//   yield 1;
+//   yield 2;
+//   yield 3;
+// }
+
+// const gen = numbers();
+
+// console.log(gen.next().value); // 1
+// console.log(gen.next().value); // 2
+
+// Key Points:
+
+// Defined using function*
+// Uses yield to return values one at a time
+// Returns a Generator object
+// Execution pauses at each yield and resumes with next()
+
+// Definition:
+// A generator function is a special JavaScript function that produces a sequence of values on demand, pausing and resuming its execution using the yield keyword.
+
+function* generateFunc(){
+    yield 1;
+    yield 2;
+    return 3;
+
+}
+let generator = generateFunc();
+let one = generator.next();
+alert(JSON.stringify(one));
+
+
+  </script>
+</body>
+</html>
 
