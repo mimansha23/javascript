@@ -50,13 +50,27 @@ let sum1 = add(5, 5);
 let sum2 = add(50, 50);
 
     </script>
-    <script>
+    <!-- <script>
          var body ="return Math.PI *rad *rad"
         var circle = new Function("rad",body);
-        alert(circle(5))
-    </script>
+        alert(circle(5))//output is 78.53981633974483
+
+</script> -->
+
+ <script>
+    //functions can be written more compactly with the help of arrow functions
+    //arrow function expression are ill suited as methods and they cannot be used as constructors
+    //syntax let func =(arg1 ,arg 2 , ...argN) => expression 
+  const Myfunc = (a,b , c )=> {return a*b*c}
+  let product = Myfunc(2,3,4)
+  document.getElementById("demo").innerHTML = "the product of the three digit is " + product
+  
+  //output//the product of the three digit is 24
+
+  </script> 
 </body>
 </html>
+
 function add(a, b) {
     // Validate that both inputs are numbers
     if (typeof a !== "number" || typeof b !== "number") {
