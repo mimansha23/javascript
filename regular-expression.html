@@ -1,0 +1,167 @@
+<!-- Regular Expressions
+A Regular Expression is a sequence of characters that forms a search pattern.
+
+Regex is a common shorthand for a regular expression.
+
+JavaScript RegExp is an Object for handling Regular Expressions.
+
+RegExp are be used for:
+
+Text searching
+Text replacing
+Text validation
+Example
+Do a case-insensitive search for "w3schools" in a string:
+
+let text = "Visit W3Schools";
+let n = text.search(/w3schools/i);
+
+Example explained:
+
+/w3schools/i  is a regular expression.
+
+w3schools  is a pattern (to be used in a search).
+
+i  is a modifier (modifies the search to be case-insensitive).
+
+Regular Expression Syntax
+/pattern/modifier flags
+Using String Methods
+Regular expressions are often used with the string methods:
+
+Method	Description
+match(regex)	Returns an Array of results
+replace(regex)	Returns a new String
+search(regex)	Returns the index of the first match
+REMOVE ADS
+
+Using String match()
+Search for "W3schools" in a string:
+
+let text = "Visit W3Schools";
+let n = text.match(/W3schools/);
+
+Using String replace()
+Replace Microsoft with W3Schools in a string:
+
+let text = "Visit Microsoft!";
+let result = text.replace(/Microsoft/i, "W3Schools");
+Using String search()
+Search for "W3Schools" in a string:
+
+let text = "Visit W3Schools";
+let n = text.search(/W3Schools/);
+
+RexExp Alternation (OR)
+In a regular expression an alternation is denoted with a vertical line character |.
+
+An alternation matches any of the alternatives separated with |.
+
+Example
+A global search for the alternatives (red|green|blue):
+
+let text = "Black, white, red, green, blue, yellow.";
+
+let result = text.match(/red|green|blue/g);
+
+JavaScript Regex Flags
+/pattern/flags
+Regular expression flags are parameters that can modify how a pattern is used, such as making it case-insensitive or global.
+
+These are the most common:
+
+Flag	Description
+/g	Performs a global match (find all)
+/i	Performs case-insensitive matching
+/u	Enables Unicode support (new 2015)
+The /g Flag (Global)
+The /g flag matches all occurrences of the pattern, rather than just the first one.
+
+Example
+A global search for "is" in a string:
+
+let text = "Is this all there is?";
+const pattern = /is/g;
+
+let result = text.match(pattern);
+
+The /i Flag (Insensitive)
+The /i flag makes a match case-insensitive: /abc/i matches "abc", "AbC", "ABC".
+
+Example
+A case-insensitive search for "w3schools" in a string:
+
+let text = "Visit W3Schools";
+const pattern = /w3schools/i;
+let result = text.match(pattern);
+
+Learn More:
+JavaScript RegExp Flags
+
+RexExp Metacharacters
+// Match words
+const pattern = /\w/;
+Metacharacters are characters with a special meaning.
+
+They can be used to match digits, words, spaces, and more.
+
+These are the most common:
+
+Meta	Description
+\d	Matches Digits
+\w	Matches Words
+\s	Matches Spaces
+RegExp \d (digits) Metacharacter
+The \d metacharacter matches digits.
+
+Example
+A global search for digits in a string:
+
+let text = "Give 100%!";
+const pattern = /\d/g;
+
+let result = text.match(pattern);
+
+RegExp \w (word) Metacharacter
+The \w metacharacter matches word characters.
+
+A word character is a character a-z, A-Z, 0-9, including _ (underscore).
+
+Example
+A global search for word characters:
+
+let text = "Give 100%!";
+const pattern = /\w/g;
+
+let result = text.match(pattern);
+Learn More:
+JavaScript RegExp Metacharacters
+
+JavaScript RegExp Quantifiers
+Quantifiers define the numbers of characters or expressions to match.
+
+Example
+Search for "lo" followed by one or more "o" characters:
+
+const pattern = /lo+/;
+The + means "one or more". The pattern matches:
+
+lo
+loo
+looo
+These are the most common quantifiers:
+
+Quantifier	Description
+x+	Matches any string with at least one occurrences of x
+x*	Matches any string with zero or more occurrences of x
+x?	Matches any string with zero or one occurrences of x
+The ? Quantifier
+x? matches zero or one occurrences of x.
+
+Example
+A global search for "1", followed by zero or one "0" characters:
+
+let text = "1, 100 or 1000?";
+const pattern = /10?/g;
+
+let result = text.match(pattern); -->
