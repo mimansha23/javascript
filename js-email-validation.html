@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email validation</title>
+    <script>
+        function validate(){
+            var mail =document.getElementById("text").value;
+
+            var regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/
+            // #we add plus sign  for more and more apperances of these File
+       
+       
+            if(regx.text(mail)){
+                alert("you have provided a valid Email ID")
+                return true
+
+            }
+       else {
+        alert("Sorry! Incorrect Email Id")
+        return false;
+       }
+       
+       
+       
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input id="text" placeholder="Email" type="text"><br><br>
+        <button onclick="validate()" type="button">Submit</button>
+    </form>
+</body>
+</html>
