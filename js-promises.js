@@ -328,9 +328,9 @@ let myPromise = new Promise(function(myResolve, myReject) {
 myPromise.then(function(value) {
   document.getElementById("demo").innerHTML = value;
 });
-
-Waiting for a file
-Example using Callback
+// for a file
+// Example
+ using Callback
 function getFile(myCallback) {
   let req = new XMLHttpRequest();
   req.open('GET', "mycar.html");

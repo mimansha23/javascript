@@ -4,3 +4,32 @@
   They support chaining, error handling, 
   and integration with modern async/await syntax, -->
  <!-- making asynchronous programming more predictable and easier to manage -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <p id="demo"></p>
+  </head>
+  <body>
+    <script>
+        let car =new Promise(function(resolve,reject){
+            fuel_fullTank = true;
+            if (fuel_fullTank)
+            resolve()
+        else
+        reject()
+        });
+
+        car.then(function(){
+document.write("the fuel tank is full . Happy driving ")
+
+
+        })
+        .catch(function(){
+            document.write("the fuel tank is not empty. ")
+        })
+    </script>
+  </body>
+  </html>
