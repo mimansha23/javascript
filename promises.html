@@ -14,22 +14,30 @@
   </head>
   <body>
     <script>
-        let car =new Promise(function(resolve,reject){
-            fuel_fullTank = true;
-            if (fuel_fullTank)
-            resolve()
-        else
-        reject()
-        });
+//         let car =new Promise(function(resolve,reject){
+//             fuel_fullTank = true;
+//             if (fuel_fullTank)
+//             resolve()
+//         else
+//         reject()
+//         });
 
-        car.then(function(){
-document.write("the fuel tank is full . Happy driving ")
+//         car.then(function(){
+// document.write("the fuel tank is full . Happy driving ")
 
 
-        })
-        .catch(function(){
-            document.write("the fuel tank is not empty. ")
-        })
+//         })
+//         .catch(function(){
+//             document.write("the fuel tank is not empty. ")
+//         })
+
+//HOW NESTED PROMISE 
+let empty_tank
+
     </script>
   </body>
   </html>
+  //output is the fuel tank if fuel happy driving
+  //that happens bcoz we set the vlaues at true 
+  //if we change the syntax as false then it display the output as the fuel is not empty 
+
